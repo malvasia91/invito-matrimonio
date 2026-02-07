@@ -1,42 +1,83 @@
-/* ====== SCRIPT.JS - Animazioni e Interazioni ====== */
+/* ====== SCRIPT.JS - Countdown, animazioni e interazioni ====== */
 
-// Smooth scroll behavior (già gestito da CSS, ma aggiungiamo JavaScript per maggiore compatibilità)
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Pagina caricata - Invito matrimonio Mattia & Lorenza');
     
-    // Aggiungi effetto fade-in al caricamento
+    // Effetto fade-in pagina
     document.body.style.opacity = '0';
     setTimeout(function() {
         document.body.style.opacity = '1';
         document.body.style.transition = 'opacity 0.5s ease-in';
     }, 100);
+
+    // Countdown fino al 4 settembre 2026, ore 11:00 (ora locale browser)
+    initCountdown();
 });
 
-// Gestisci il click sul pulsante RSVP con feedback
+// Countdown function
+function initCountdown() {
+    const targetDate = new Date(2026, 8, 4, 11, 0, 0); // mesi 0-based: 8 = settembre
+
+    const daysEl = document.getElementById('days');
+    const hoursEl = document.getElementById('hours');
+    const minutesEl = document.getElementById('minutes');
+    const secondsEl = document.getElementById('seconds');
+
+    if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
+
+    function updateCountdown() {
+        const now = new Date();
+        const diff = targetDate.getTime() - now.getTime();
+
+        if (diff <= 0) {
+            daysEl.textContent = '00';
+            hoursEl.textContent = '00';
+            minutesEl.textContent = '00';
+            secondsEl.textContent = '00';
+            clearInterval(intervalId);
+            return;
+        }
+
+        const totalSeconds = Math.floor(diff / 1000);
+        const days = Math.floor(totalSeconds / (3600 * 24));
+        const hours = Math.floor((totalSeconds % (3600 * 24)) / 3600);
+        const minutes = Math.floor((totalSeconds % 3600) / 60);
+        const seconds = totalSeconds % 60;
+
+        daysEl.textContent = String(days).padStart(2, '0');
+        hoursEl.textContent = String(hours).padStart(2, '0');
+        minutesEl.textContent = String(minutes).padStart(2, '0');
+        secondsEl.textContent = String(seconds).padStart(2, '0');
+    }
+
+    updateCountdown();
+    const intervalId = setInterval(updateCountdown, 1000);
+}
+
+// Tracking click pulsante RSVP
 const rsvpButton = document.querySelector('.rsvp-button');
 if (rsvpButton) {
-    rsvpButton.addEventListener('click', function(e) {
-        // Log per tracking
-        console.log('Utente ha cliccato su Conferma Presenza');
+    rsvpButton.addEventListener('click', function() {
+        console.log('Utente ha cliccato su Conferma Presenza - Google Forms');
     });
 }
 
-// Gestisci i link alle mappe
-const locationLinks = document.querySelectorAll('.location-link');
-locationLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-        console.log('Utente apre mappa: ' + this.href);
+// Tracking link Wedshots
+const wedshotsButton = document.querySelector('.wedshots-button');
+if (wedshotsButton) {
+    wedshotsButton.addEventListener('click', function() {
+        console.log('Utente ha cliccato su Wedshots');
     });
-});
+}
 
-// Rileva se siamo su mobile e ottimizza per touch
+// Rileva se siamo su mobile
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 if (isMobile) {
     console.log('Accesso da dispositivo mobile rilevato');
     document.body.classList.add('mobile');
 }
 
-// Scroll tracking per analytics (opzionale)
+// Scroll tracking
 let scrolled = false;
 window.addEventListener('scroll', function() {
     if (!scrolled) {
@@ -45,11 +86,11 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Copia IBAN al click (opzionale)
+// Copia IBAN al click
 const ibanElement = document.querySelector('.bank-value');
 if (ibanElement) {
     ibanElement.addEventListener('click', function() {
-        const iban = this.textContent;
+        const iban = this.textContent.trim();
         if (navigator.clipboard) {
             navigator.clipboard.writeText(iban).then(function() {
                 alert('IBAN copiato negli appunti!');

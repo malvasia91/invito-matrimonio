@@ -6,7 +6,7 @@
     <title>Mattia & Lorenza - Matrimonio 4 Settembre 2026</title>
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <!-- Collegamento al file CSS esterno -->
     <link rel="stylesheet" href="style.css">
@@ -20,9 +20,29 @@
             <h1>Lorenza</h1>
             
             <div class="hero-divider"></div>
-            
-            <p class="hero-subtitle">vi invitano a celebrare il loro matrimonio</p>
-            <p class="hero-date">4 SETTEMBRE 2026</p>
+
+            <!-- COUNTDOWN -->
+            <div class="countdown-wrapper">
+                <div class="countdown-title">Manca al grande giorno</div>
+                <div id="countdown" class="countdown">
+                    <div class="count-box">
+                        <span class="count-number" id="days">00</span>
+                        <span class="count-label">Giorni</span>
+                    </div>
+                    <div class="count-box">
+                        <span class="count-number" id="hours">00</span>
+                        <span class="count-label">Ore</span>
+                    </div>
+                    <div class="count-box">
+                        <span class="count-number" id="minutes">00</span>
+                        <span class="count-label">Minuti</span>
+                    </div>
+                    <div class="count-box">
+                        <span class="count-number" id="seconds">00</span>
+                        <span class="count-label">Secondi</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -31,28 +51,39 @@
         <div class="container">
             <h2 class="section-title">Celebriamo insieme</h2>
 
-            <!-- CERIMONIA -->
-            <div class="event-item">
-                <p class="event-item-label">📍 Cerimonia</p>
-                <p class="event-item-content">Chiesa Parrocchiale di Maria Santissima Addolorata</p>
-                <p class="event-item-location">Viale Toledo, 61 - 72015 Selva di Fasano (BR)</p>
-                <p class="event-item-time">⏰ Ore 11:30</p>
-                <a href="https://www.google.com/maps/search/Viale+Toledo+61+72015+Selva+di+Fasano+BR" target="_blank" rel="noopener noreferrer" class="location-link">
-                    <span class="location-icon">📍</span>
-                    Apri su Google Maps
-                </a>
-            </div>
+            <div class="event-cards-wrapper">
+                <!-- CERIMONIA -->
+                <article class="event-card event-card-church">
+                    <div class="event-card-overlay">
+                        <div class="event-card-header">
+                            <h3 class="event-card-title">⛪ Chiesa</h3>
+                        </div>
+                        <p class="event-card-place">Chiesa Parrocchiale di Maria Santissima Addolorata</p>
+                        <p class="event-card-city">Selva di Fasano (BR)</p>
+                        <p class="event-card-time">Orario: 11:00</p>
+                        <a href="https://www.google.it/maps/place/Abbazia+San+Lorenzo+-+Sala+Ricevimenti/@40.833156,17.3763361,834m/data=!3m2!1e3!4b1!4m6!3m5!1s0x1346495123249fff:0xec1f5bfc8aa6afb!8m2!3d40.833156!4d17.378911!16s%2Fg%2F12639b37s?entry=ttu&g_ep=EgoyMDI2MDIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="event-card-button">
+                            Visualizza su Google Maps
+                        </a>
+                    </div>
+                </article>
 
-            <!-- RICEVIMENTO -->
-            <div class="event-item">
-                <p class="event-item-label">🍽️ Ricevimento</p>
-                <p class="event-item-content">Abbazia San Lorenzo</p>
-                <p class="event-item-location">Contrada Sant'Angelo, 5 - 72015 Fasano (BR)</p>
-                <p class="event-item-time">⏰ A seguire la cerimonia</p>
-                <a href="https://www.google.com/maps/search/Contrada+Sant'Angelo+5+72015+Fasano+BR" target="_blank" rel="noopener noreferrer" class="location-link">
-                    <span class="location-icon">📍</span>
-                    Apri su Google Maps
-                </a>
+                <!-- RICEVIMENTO -->
+                <article class="event-card event-card-reception">
+                    <div class="event-card-overlay">
+                        <div class="event-card-header">
+                            <div class="event-card-icon">
+                                <img src="posate-no-background.png" alt="Icona Ricevimento">
+                            </div>
+                            <h3 class="event-card-title">🍽️ Ricevimento</h3>
+                        </div>
+                        <p class="event-card-place">Abbazia San Lorenzo</p>
+                        <p class="event-card-city">Fasano (BR)</p>
+                        <p class="event-card-time">Orario: a seguire</p>
+                        <a href="https://www.google.it/maps/place/Chiesa+Parrocchiale+di+Maria+Santissima+Addolorata/@40.8273178,17.3197129,834m/data=!3m2!1e3!4b1!4m6!3m5!1s0x13464c90411f2a91:0x340ae61f4a261b4!8m2!3d40.8273178!4d17.3222878!16s%2Fg%2F1th45rsh?entry=ttu&g_ep=EgoyMDI2MDIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="event-card-button">
+                            Visualizza su Google Maps
+                        </a>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
@@ -64,12 +95,9 @@
                 La vostra presenza è importante per noi.<br>
                 Vi preghiamo di confermare la vostra partecipazione
             </p>
-            <a href="https://wa.me/393400000000?text=Ciao%20Mattia%20e%20Lorenza%2C%20confermo%20la%20mia%20presenza%20al%20matrimonio!" class="rsvp-button">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhLmOwyCjCI9Qbxk0VspBtYxM_69epHQcdN7dXP6k9K7qphg/viewform?usp=sharing&ouid=110856666460905142488" target="_blank" rel="noopener noreferrer" class="rsvp-button">
                 Conferma Presenza
             </a>
-            <p style="font-size: 0.85rem; color: var(--color-gold); margin-top: 15px; font-style: italic;">
-                (via WhatsApp)
-            </p>
         </div>
     </section>
 
@@ -88,6 +116,25 @@
             <div class="bank-label" style="margin-top: 15px;">Intestato a</div>
             <div class="bank-value">Mattia Valente</div>
         </div>
+
+        <div class="footer-divider"></div>
+
+        <!-- WEDSHOTS SECTION -->
+        <section class="wedshots">
+            <div class="wedshots-card">
+                <div class="wedshots-logo-wrapper">
+                    <img src="wedshots.png" alt="Wedshoots" class="wedshots-logo">
+                </div>
+                <h3 class="wedshots-title">Condividete con noi i vostri scatti</h3>
+                <p class="wedshots-text">
+                    Il giorno del matrimonio potete caricare qui le vostre foto e i vostri ricordi,
+                    per rivivere insieme ogni momento speciale.
+                </p>
+                <a href="https://www.matrimonio.com/web/mattia-valente-and-lorenza-de-pino/wedshoots-8" target="_blank" rel="noopener noreferrer" class="wedshots-button">
+                    Carica le tue foto
+                </a>
+            </div>
+        </section>
 
         <div class="footer-divider"></div>
 

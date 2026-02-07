@@ -101,53 +101,65 @@ header.hero::after {
     margin: 25px auto 20px auto;
 }
 
-/* ====== COUNTDOWN ====== */
+/* ====== COUNTDOWN - STILE CHIARO ====== */
 .countdown-wrapper {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .countdown-title {
-    font-size: 0.95rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-primary);
+    margin-bottom: 18px;
+    letter-spacing: 1px;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--color-text);
-    margin-bottom: 12px;
 }
 
 .countdown {
-    display: inline-flex;
-    padding: 10px;
-    background: rgba(45, 61, 53, 0.1);
-    border-radius: 12px;
-    backdrop-filter: blur(4px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    display: flex;
+    gap: 12px;
+    padding: 16px;
+    background: rgba(248, 250, 248, 0.95);
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(201, 169, 97, 0.2);
+    box-shadow: 0 8px 24px rgba(90, 122, 109, 0.12);
 }
 
 .count-box {
-    background: #232323;
-    color: #fff;
-    padding: 10px 14px;
-    border-radius: 8px;
-    margin: 0 4px;
-    min-width: 65px;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--color-primary);
+    padding: 14px 18px;
+    border-radius: 12px;
+    min-width: 70px;
     text-align: center;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 12px rgba(90, 122, 109, 0.08);
+    border: 1px solid rgba(90, 122, 109, 0.15);
+    transition: all 0.3s ease;
+}
+
+.count-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(90, 122, 109, 0.16);
+    background: rgba(255, 255, 255, 1);
 }
 
 .count-number {
     display: block;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    color: var(--color-primary);
 }
 
 .count-label {
     display: block;
-    font-size: 0.7rem;
-    margin-top: 4px;
+    font-size: 0.75rem;
+    margin-top: 6px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #f1c376;
+    font-weight: 500;
+    color: var(--color-gold);
 }
 
 /* ====== SEZIONE DETTAGLI EVENTO ====== */
@@ -524,4 +536,5 @@ section.rsvp {
 footer {
     animation: fadeInUp 0.8s ease-out 0.4s both;
 }
+
 

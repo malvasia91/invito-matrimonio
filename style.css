@@ -11,8 +11,9 @@
     --color-gold: #c9a961;
     --color-dark: #2d3d35;
     --color-text: #4a5a52;
-    --font-heading: 'Cinzel', serif;
-    --font-body: 'Lora', serif;
+    --color-card-bg: rgba(25, 25, 25, 0.65);
+    --font-heading: 'Great Vibes', cursive;
+    --font-body: 'Montserrat', sans-serif;
 }
 
 html {
@@ -29,7 +30,7 @@ body {
 
 /* ====== CONTAINER PRINCIPALE ====== */
 .container {
-    max-width: 600px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -48,29 +49,28 @@ header.hero {
     padding: 40px 20px;
 }
 
-/* Elemento decorativo floreale (SVG stilizzato) */
-header.hero::before {
-    content: '';
-    position: absolute;
-    top: 5%;
-    right: -20px;
-    width: 150px;
-    height: 150px;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 10 Q60 30 50 50 Q40 30 50 10' fill='%235a7a6d' opacity='0.2'/%3E%3Cpath d='M50 50 Q70 60 50 70 Q30 60 50 50' fill='%23c9a961' opacity='0.15'/%3E%3C/svg%3E") no-repeat center;
-    background-size: contain;
-    pointer-events: none;
-}
-
+header.hero::before,
 header.hero::after {
     content: '';
     position: absolute;
-    bottom: 5%;
-    left: -30px;
-    width: 180px;
-    height: 180px;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 10 Q60 30 50 50 Q40 30 50 10' fill='%235a7a6d' opacity='0.15'/%3E%3Cpath d='M30 40 L50 60 L70 40' fill='%23c9a961' opacity='0.12'/%3E%3C/svg%3E") no-repeat center;
-    background-size: contain;
-    pointer-events: none;
+    border-radius: 50%;
+    filter: blur(20px);
+    opacity: 0.28;
+    background: radial-gradient(circle at center, #c9e3d1 0%, transparent 60%);
+}
+
+header.hero::before {
+    width: 320px;
+    height: 320px;
+    top: -60px;
+    right: -40px;
+}
+
+header.hero::after {
+    width: 380px;
+    height: 380px;
+    bottom: -80px;
+    left: -60px;
 }
 
 .hero-content {
@@ -80,18 +80,17 @@ header.hero::after {
 
 .hero-content h1 {
     font-family: var(--font-heading);
-    font-size: 3.5rem;
+    font-size: 3.8rem;
     font-weight: 400;
     color: var(--color-primary);
-    margin-bottom: 20px;
-    letter-spacing: 2px;
-    font-style: italic;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 
 .hero-content .ampersand {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     color: var(--color-gold);
-    margin: 15px 0;
+    margin: 10px 0;
     font-weight: 300;
 }
 
@@ -99,23 +98,56 @@ header.hero::after {
     width: 80px;
     height: 1px;
     background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
-    margin: 30px auto;
+    margin: 25px auto 20px auto;
 }
 
-.hero-subtitle {
-    font-size: 1rem;
-    color: var(--color-text);
-    font-weight: 300;
-    letter-spacing: 1px;
+/* ====== COUNTDOWN ====== */
+.countdown-wrapper {
     margin-top: 20px;
 }
 
-.hero-date {
-    font-size: 1.8rem;
-    color: var(--color-primary);
+.countdown-title {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-text);
+    margin-bottom: 12px;
+}
+
+.countdown {
+    display: inline-flex;
+    padding: 10px;
+    background: rgba(45, 61, 53, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.count-box {
+    background: #232323;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin: 0 4px;
+    min-width: 65px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+}
+
+.count-number {
+    display: block;
+    font-size: 1.4rem;
     font-weight: 600;
-    margin-top: 30px;
-    font-family: var(--font-heading);
+    letter-spacing: 1px;
+}
+
+.count-label {
+    display: block;
+    font-size: 0.7rem;
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #f1c376;
 }
 
 /* ====== SEZIONE DETTAGLI EVENTO ====== */
@@ -138,77 +170,121 @@ section.event-details::before {
 
 .section-title {
     font-family: var(--font-heading);
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: var(--color-primary);
     text-align: center;
     margin-bottom: 40px;
     font-weight: 400;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
-.event-item {
-    margin-bottom: 35px;
-    padding-bottom: 35px;
-    border-bottom: 1px solid rgba(201, 169, 97, 0.2);
+/* Cards wrapper */
+.event-cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
 }
 
-.event-item:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
+/* Singola card evento */
+.event-card {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    min-height: 220px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.18);
 }
 
-.event-item-label {
-    font-size: 0.85rem;
-    color: var(--color-gold);
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
+/* SFONDI MODIFICABILI: sostituisci church-bg.jpg e reception-bg.jpg con le tue immagini */
+.event-card-church {
+    background-image: url('church-bg.jpg');
+}
+
+.event-card-reception {
+    background-image: url('reception-bg.jpg');
+}
+
+.event-card-overlay {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    padding: 24px 22px 26px 22px;
+    background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.65) 100%);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.event-card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.event-card-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+.event-card-icon img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+}
+
+.event-card-title {
+    font-family: var(--font-body);
+    font-size: 1.3rem;
     font-weight: 600;
+}
+
+.event-card-place {
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.event-card-city {
+    font-size: 0.9rem;
+    opacity: 0.9;
     margin-bottom: 8px;
 }
 
-.event-item-content {
-    font-size: 1.1rem;
-    color: var(--color-primary);
-    font-weight: 500;
-    margin-bottom: 6px;
-}
-
-.event-item-location {
-    font-size: 0.95rem;
-    color: var(--color-text);
-    margin-bottom: 10px;
-}
-
-.event-item-time {
+.event-card-time {
     font-size: 0.9rem;
-    color: var(--color-gold);
-    font-style: italic;
-}
-
-.location-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--color-primary);
-    text-decoration: none;
     font-weight: 500;
-    border-bottom: 1px solid rgba(90, 122, 109, 0.3);
+    margin-bottom: auto;
+    opacity: 0.95;
+}
+
+.event-card-button {
+    margin-top: 18px;
+    align-self: center;
+    display: inline-block;
+    padding: 10px 26px;
+    background: rgba(246, 230, 200, 0.92);
+    border-radius: 999px;
+    color: #3a2a18;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
     transition: all 0.3s ease;
-    margin-top: 8px;
 }
 
-.location-link:hover {
-    color: var(--color-gold);
-    border-bottom-color: var(--color-gold);
-}
-
-.location-icon {
-    width: 18px;
-    height: 18px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+.event-card-button:hover {
+    background: #f0d3a6;
+    transform: translateY(-1px);
 }
 
 /* ====== SEZIONE RSVP ====== */
@@ -255,7 +331,7 @@ section.rsvp {
 /* ====== FOOTER ====== */
 footer {
     background: linear-gradient(180deg, #f0f3ed 0%, #e8ede8 100%);
-    padding: 50px 20px;
+    padding: 50px 20px 40px 20px;
     text-align: center;
     border-top: 1px solid rgba(201, 169, 97, 0.2);
 }
@@ -277,7 +353,7 @@ footer {
 }
 
 .bank-info {
-    margin: 30px 0;
+    margin: 30px 0 10px 0;
     font-size: 0.95rem;
     color: var(--color-text);
 }
@@ -300,17 +376,84 @@ footer {
     margin-bottom: 15px;
 }
 
+/* ====== WEDSHOTS SECTION ====== */
+.wedshots {
+    margin: 30px auto 10px auto;
+}
+
+.wedshots-card {
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 26px 22px 26px 22px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(234, 237, 230, 0.95), rgba(248, 250, 248, 0.98));
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.wedshots-logo-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 14px;
+}
+
+.wedshots-logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 18px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+}
+
+.wedshots-title {
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.wedshots-text {
+    font-size: 0.95rem;
+    color: var(--color-text);
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.wedshots-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.wedshots-button:hover {
+    background: var(--color-dark);
+    transform: translateY(-2px);
+}
+
 .initials-logo {
     font-family: var(--font-heading);
-    font-size: 2rem;
+    font-size: 2.3rem;
     color: var(--color-primary);
     font-weight: 400;
-    margin-top: 30px;
-    letter-spacing: 2px;
+    margin-top: 18px;
+    letter-spacing: 1px;
     opacity: 0.8;
 }
 
 /* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 3.2rem;
+    }
+}
+
 @media (max-width: 480px) {
     .hero-content h1 {
         font-size: 2.8rem;
@@ -320,16 +463,17 @@ footer {
         font-size: 2rem;
     }
 
-    .hero-date {
-        font-size: 1.4rem;
+    .countdown {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .count-box {
+        margin-bottom: 6px;
     }
 
     .section-title {
-        font-size: 1.4rem;
-    }
-
-    .event-item-content {
-        font-size: 1rem;
+        font-size: 1.6rem;
     }
 
     .rsvp-button {
@@ -338,7 +482,7 @@ footer {
     }
 
     .initials-logo {
-        font-size: 1.6rem;
+        font-size: 2rem;
     }
 }
 

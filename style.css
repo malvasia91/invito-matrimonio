@@ -378,7 +378,7 @@ footer {
     margin: 20px auto;
 }
 
-/* ====== COORDINATE BANCARIE - CORNICE TRATTEGGIATA ====== */
+/* ====== COORDINATE BANCARIE - CORNICE TRATTEGGIATA PULITA ====== */
 .bank-info {
     max-width: 420px;
     margin: 30px auto 20px auto;
@@ -387,7 +387,6 @@ footer {
     border: 2px dashed rgba(90, 122, 109, 0.5);
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(90, 122, 109, 0.08);
-    position: relative;
     font-size: 0.95rem;
 }
 
@@ -407,10 +406,8 @@ footer {
     font-weight: 500;
     word-break: break-all;
     margin-bottom: 16px;
-    padding: 8px 12px;
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: 6px;
 }
+
 
 /* ====== WEDSHOTS SECTION ====== */
 .wedshots {
@@ -546,6 +543,7 @@ section.rsvp {
 footer {
     animation: fadeInUp 0.8s ease-out 0.4s both;
 }
+
 
 
 

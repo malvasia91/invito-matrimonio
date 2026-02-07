@@ -194,6 +194,20 @@ section.event-details::before {
     background-position: center;
     min-height: 220px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+/* effetto hover su tutta l’area */
+.event-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(0,0,0,0.28);
+    filter: brightness(1.05);
+}
+
+/* se vuoi dare un leggero effetto anche all’overlay */
+.event-card:hover .event-card-overlay {
+    background: linear-gradient(180deg, rgba(0,0,0,0.28) 0%, rgba(0,0,0,0.7) 100%);
 }
 
 /* SFONDI MODIFICABILI: sostituisci church-bg.jpg e reception-bg.jpg con le tue immagini */
@@ -510,3 +524,4 @@ section.rsvp {
 footer {
     animation: fadeInUp 0.8s ease-out 0.4s both;
 }
+

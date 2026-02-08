@@ -227,20 +227,20 @@ section.event-details::before {
     font-weight: 400;
     letter-spacing: 1px;
 }
-*/ 
 
-/* TITOLI SEMPLICI - STILE ORIGINALE */
+
+
 .section-title,
 .tourism-title {
-    font-family: var(--font-heading) !important; /* Pinyon Script */
+    font-family: var(--font-heading) !important; /* Pinyon Script 
     font-size: clamp(2rem, 8vw, 2.6rem) !important;
-    color: var(--color-primary) !important; /* Verde salvia */
+    color: var(--color-primary) !important; /* Verde salvia 
     text-align: center !important;
     margin-bottom: 40px !important;
     font-weight: 400 !important;
     letter-spacing: 1px !important;
-    /* ← NIENTE SFONDO, NIENTE PADDING, NIENTE OMBRA */
-}
+    /* ← NIENTE SFONDO, NIENTE PADDING, NIENTE OMBRA 
+}*/ 
 
 /* Cards wrapper */
 .event-cards-wrapper {
@@ -490,6 +490,8 @@ footer {
 }
 
 /* Titolo "Wedshots" stesso colore del testo */
+.section-title,
+.tourism-title,
 .wedshots-title {
     font-family: var(--font-body);
     font-size: 1.15rem;
@@ -770,6 +772,7 @@ section.rsvp {
 footer {
     animation: fadeInUp 0.8s ease-out 0.4s both;
 }
+
 
 
 

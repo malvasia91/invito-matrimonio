@@ -465,12 +465,14 @@ footer {
     box-shadow: 0 4px 12px rgba(0,0,0,0.18);
 }
 
+/* Titolo "Wedshots" stesso colore del testo */
 .wedshots-title {
     font-family: var(--font-body);
     font-size: 1.15rem;
     font-weight: 600;
-    color: var(--color-primary);
+    color: var(--color-primary) !important; /* ← Verde salvia identico */
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .wedshots-text {
@@ -571,6 +573,7 @@ section.rsvp {
 footer {
     animation: fadeInUp 0.8s ease-out 0.4s both;
 }
+
 
 
 

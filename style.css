@@ -229,25 +229,18 @@ section.event-details::before {
 }
 */ 
 
-/* TITOLI UNIFORMATI A WEDSHOTS */
+/* TITOLI SEMPLICI - STILE ORIGINALE */
 .section-title,
 .tourism-title {
-    font-family: var(--font-heading);
-    font-size: clamp(2rem, 8vw, 2.6rem);
-    color: var(--color-primary);
-    text-align: center;
-    margin-bottom: 40px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    background: linear-gradient(135deg, rgba(234, 237, 230, 0.95), rgba(248, 250, 248, 0.98)); /* ← STILE WEDSHOTS */
-    padding: 12px 24px;
-    border-radius: 18px; /* ← STESSO DI WEDSHOTS */
-    display: inline-block;
-    box-shadow: 0 6px 20px rgba(90, 122, 109, 0.08);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(201, 169, 97, 0.15);
+    font-family: var(--font-heading) !important; /* Pinyon Script */
+    font-size: clamp(2rem, 8vw, 2.6rem) !important;
+    color: var(--color-primary) !important; /* Verde salvia */
+    text-align: center !important;
+    margin-bottom: 40px !important;
+    font-weight: 400 !important;
+    letter-spacing: 1px !important;
+    /* ← NIENTE SFONDO, NIENTE PADDING, NIENTE OMBRA */
 }
-
 
 /* Cards wrapper */
 .event-cards-wrapper {
@@ -777,6 +770,7 @@ section.rsvp {
 footer {
     animation: fadeInUp 0.8s ease-out 0.4s both;
 }
+
 
 
 

@@ -469,13 +469,13 @@ footer {
     font-family: var(--font-body);
     font-size: 1.15rem;
     font-weight: 600;
-    color: var(--color-text);
+    color: var(--color-primary);
     margin-bottom: 10px;
 }
 
 .wedshots-text {
     font-size: 0.95rem;
-    color: var(--color-text);
+    color: var(--color-primary);
     line-height: 1.7;
     margin-bottom: 18px;
 }
@@ -571,6 +571,7 @@ section.rsvp {
 footer {
     animation: fadeInUp 0.8s ease-out 0.4s both;
 }
+
 
 
 

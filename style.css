@@ -469,7 +469,7 @@ footer {
     font-family: var(--font-body);
     font-size: 1.15rem;
     font-weight: 600;
-    color: var(--color-primary);
+    color: var(--color-text);
     margin-bottom: 10px;
 }
 
@@ -571,6 +571,7 @@ section.rsvp {
 footer {
     animation: fadeInUp 0.8s ease-out 0.4s both;
 }
+
 
 
 

@@ -101,6 +101,15 @@ header.hero::after {
     margin: 25px auto 20px auto;
 }
 
+/* Data del matrimonio */
+.hero-date {
+    font-size: 1.8rem;
+    color: var(--color-primary); /* ← già così, ma confermo */
+    font-weight: 600;
+    margin-top: 30px;
+    font-family: var(--font-body);
+}
+
 /* ====== COUNTDOWN - STILE CHIARO ====== */
 .countdown-wrapper {
     margin-top: 30px;
@@ -573,6 +582,7 @@ section.rsvp {
 footer {
     animation: fadeInUp 0.8s ease-out 0.4s both;
 }
+
 
 
 

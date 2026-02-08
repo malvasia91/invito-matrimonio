@@ -696,45 +696,58 @@ section.rsvp {
     right: 16px;
 }
 
-/* FIXED TESTO CAROUSEL MOBILE */
+/* CAROUSEL PIÙ GRANDE SU MOBILE - TESTO COMPLETO */
 @media (max-width: 768px) {
-    .carousel-slide-content {
-        left: 12px !important;
-        right: 12px !important;
-        padding: 20px 16px 16px 16px !important;
-        max-height: 140px !important;
+    .tourism-section {
+        padding: 40px 16px 30px 16px !important;
     }
     
-    .carousel-slide-content h3 {
-        font-size: 1.1rem !important;
-        line-height: 1.2 !important;
-        margin-bottom: 4px !important;
-        display: block !important;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-    
-    .carousel-slide-content p {
-        font-size: 0.85rem !important;
-        line-height: 1.4 !important;
-        display: -webkit-box !important;
-        -webkit-line-clamp: 2 !important; /* ← SOLO 2 righe su mobile */
-        -webkit-box-orient: vertical !important;
-        overflow: hidden !important;
-        margin: 0 !important;
-        padding-right: 4px !important;
+    .carousel-container {
+        max-width: 95vw !important; /* ← Più largo */
+        margin: 0 auto !important;
     }
     
     .carousel-slide img {
-        height: 220px !important;
+        height: 260px !important; /* ← Più alto */
+    }
+    
+    .carousel-slide-content {
+        left: 16px !important;
+        right: 16px !important;
+        padding: 24px 20px 20px 20px !important;
+        max-height: 160px !important; /* ← Più spazio per testo */
+    }
+    
+    .carousel-slide-content h3 {
+        font-size: 1.15rem !important;
+        line-height: 1.25 !important;
+        margin-bottom: 8px !important;
+        white-space: normal !important; /* ← Tutto il titolo */
+        overflow: visible !important;
+        display: block !important;
+        -webkit-line-clamp: unset !important;
+    }
+    
+    .carousel-slide-content p {
+        font-size: 0.88rem !important;
+        line-height: 1.45 !important;
+        -webkit-line-clamp: 3 !important; /* ← 3 righe invece di 2 */
+        max-height: 110px !important;
+        padding-right: 0 !important;
+    }
+    
+    .carousel-nav {
+        width: 46px !important;
+        height: 46px !important;
     }
 }
+
 
 
 footer {
     animation: fadeInUp 0.8s ease-out 0.4s both;
 }
+
 
 
 

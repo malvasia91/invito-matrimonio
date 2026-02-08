@@ -602,24 +602,27 @@ section.rsvp {
 }
 
 .carousel-container {
-    position: relative !important;
-    max-width: 900px !important;
-    margin: 0 auto !important;
-    overflow: hidden !important;
-    border-radius: 18px !important; /* ← STESSO DI .wedshots-card */
-    box-shadow: 0 12px 30px rgba(90, 122, 109, 0.12) !important;
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 18px !important; /* ← FORZA 18px */
+    box-shadow: 0 12px 30px rgba(90, 122, 109, 0.12);
+    background: rgba(255, 255, 255, 0.1); /* ← SFONDO per vedere i bordi */
 }
 
 .carousel-slide {
     flex: 0 0 100% !important;
-    position: relative !important;
-    display: block !important;
-    text-decoration: none !important;
-    border-radius: 18px !important; /* ← AGGIUNTO !important */
+    position: relative;
+    display: block;
+    text-decoration: none;
+    border-radius: 18px !important; /* ← STESSO DI WEDSHOTS */
     overflow: hidden !important;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12) !important;
-    transition: all 0.4s ease !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    transition: all 0.4s ease;
     margin: 0 !important;
+    width: 100% !important;
+    min-width: 100% !important;
 }
 
 .carousel-track {
@@ -752,6 +755,7 @@ section.rsvp {
 footer {
     animation: fadeInUp 0.8s ease-out 0.4s both;
 }
+
 
 
 

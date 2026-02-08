@@ -112,7 +112,7 @@ function initCarousel() {
     let currentIndex = 0;
     
     function updateCarousel() {
-        const translateX = -currentIndex * 100;
+        const translateX = -currentIndex * 100; // ← 100% per slide
         track.style.transform = `translateX(${translateX}%)`;
     }
     
@@ -125,6 +125,8 @@ function initCarousel() {
         currentIndex = (currentIndex - 1 + slides.length) % slides.length;
         updateCarousel();
     });
+}
+
     
     // Auto-play opzionale (commentato)
     // setInterval(() => {
@@ -137,4 +139,5 @@ function initCarousel() {
 if (document.getElementById('carouselTrack')) {
     initCarousel();
 }
+
 

@@ -78,15 +78,15 @@ header.hero::after {
     z-index: 1;
 }
 
+/* Titoli nomi sposi */
 .hero-content h1 {
     font-family: var(--font-heading);
-    font-size: 3.8rem;
+    font-size: clamp(2.8rem, 8vw, 4rem); /* Responsive */
     font-weight: 400;
     color: var(--color-primary);
     margin-bottom: 10px;
     letter-spacing: 1px;
 }
-
 .hero-content .ampersand {
     font-size: 2.4rem;
     color: var(--color-gold);
@@ -217,9 +217,10 @@ section.event-details::before {
     background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
 }
 
+/* Titolo sezione eventi */
 .section-title {
     font-family: var(--font-heading);
-    font-size: 4rem;
+    font-size: clamp(1.6rem, 6vw, 2rem); /* Responsive */
     color: var(--color-primary);
     text-align: center;
     margin-bottom: 40px;
@@ -509,9 +510,10 @@ footer {
     transform: translateY(-2px);
 }
 
+/* Logo iniziali footer */
 .initials-logo {
     font-family: var(--font-heading);
-    font-size: 2.3rem;
+    font-size: clamp(1.8rem, 7vw, 2.3rem); /* Responsive */
     color: var(--color-primary);
     font-weight: 400;
     margin-top: 18px;
@@ -582,6 +584,7 @@ section.rsvp {
 footer {
     animation: fadeInUp 0.8s ease-out 0.4s both;
 }
+
 
 
 

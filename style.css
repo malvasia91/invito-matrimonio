@@ -217,16 +217,37 @@ section.event-details::before {
     background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
 }
 
-/* Titolo sezione eventi */
+/* Titolo sezione eventi 
 .section-title {
     font-family: var(--font-body);
-    font-size: clamp(2rem, 8vw, 2.6rem); /* ← Aumentato da 1.6rem-2rem a 2rem-2.6rem - Responsive*/
+    font-size: clamp(2rem, 8vw, 2.6rem);  ← Aumentato da 1.6rem-2rem a 2rem-2.6rem - Responsive
     color: var(--color-primary) !important;
     text-align: center;
     margin-bottom: 40px;
     font-weight: 400;
     letter-spacing: 1px;
 }
+*/ 
+
+/* TITOLI UNIFORMATI A WEDSHOTS */
+.section-title,
+.tourism-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 8vw, 2.6rem);
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, rgba(234, 237, 230, 0.95), rgba(248, 250, 248, 0.98)); /* ← STILE WEDSHOTS */
+    padding: 12px 24px;
+    border-radius: 18px; /* ← STESSO DI WEDSHOTS */
+    display: inline-block;
+    box-shadow: 0 6px 20px rgba(90, 122, 109, 0.08);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(201, 169, 97, 0.15);
+}
+
 
 /* Cards wrapper */
 .event-cards-wrapper {
@@ -589,9 +610,9 @@ section.rsvp {
     border-radius: 18px !important;
 }
 
-.tourism-title {
+/*.tourism-title {
     margin-bottom: 12px;
-}
+}*/
 
 .tourism-intro {
     font-size: 1.05rem;
@@ -756,6 +777,7 @@ section.rsvp {
 footer {
     animation: fadeInUp 0.8s ease-out 0.4s both;
 }
+
 
 
 

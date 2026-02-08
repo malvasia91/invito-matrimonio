@@ -613,11 +613,12 @@ section.rsvp {
 .carousel-track {
     display: flex;
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    gap: 20px;
+    gap: 0; /* ← RIMUOVO gap per centrare perfettamente */
+    width: 400%; /* ← 100% x 4 slides */
 }
 
 .carousel-slide {
-    flex: 0 0 100%;
+    flex: 0 0 25%; /* ← Esattamente 1/4 della larghezza */
     position: relative;
     display: block;
     text-decoration: none;
@@ -625,6 +626,7 @@ section.rsvp {
     overflow: hidden;
     box-shadow: 0 8px 24px rgba(0,0,0,0.12);
     transition: all 0.4s ease;
+    margin: 0; /* ← No margini */
 }
 
 .carousel-slide:hover {
@@ -636,59 +638,72 @@ section.rsvp {
     width: 100%;
     height: 280px;
     object-fit: cover;
+    display: block;
 }
 
 .carousel-slide-content {
     position: absolute;
     bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(transparent, rgba(0,0,0,0.85));
+    left: 20px; /* ← Allineo a sinistra */
+    right: 20px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
     color: white;
-    padding: 28px 24px 24px 24px;
+    padding: 24px 0 20px 0; /* ← Padding solo top/bottom */
+    max-width: calc(100% - 40px); /* ← Non va oltre i margini */
+    word-wrap: break-word;
+    overflow: hidden;
 }
 
 .carousel-slide-content h3 {
     font-family: var(--font-body);
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 600;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
+    line-height: 1.2;
 }
 
 .carousel-slide-content p {
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: 0.92rem;
+    line-height: 1.5;
     opacity: 0.95;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* ← Max 3 righe */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
+/* Frecce TRASPARENTI */
 .carousel-nav {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(90, 122, 109, 0.9);
-    color: white;
-    border: none;
-    width: 50px;
-    height: 50px;
+    background: transparent !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(90, 122, 109, 0.3);
+    backdrop-filter: blur(10px);
 }
 
 .carousel-nav:hover {
-    background: var(--color-primary);
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: white !important;
+    border-color: rgba(255, 255, 255, 0.8);
     transform: translateY(-50%) scale(1.1);
 }
 
 .prev {
-    left: 12px;
+    left: 16px;
 }
 
 .next {
-    right: 12px;
+    right: 16px;
 }
 
 /* RESPONSIVE */
@@ -698,19 +713,23 @@ section.rsvp {
     }
     
     .carousel-slide-content {
-        padding: 24px 20px 20px 20px;
+        left: 16px;
+        right: 16px;
+        padding: 20px 0 16px 0;
     }
     
     .carousel-nav {
-        width: 44px;
-        height: 44px;
-        font-size: 1.4rem;
+        width: 42px;
+        height: 42px;
+        font-size: 1.2rem;
     }
 }
+
 
 footer {
     animation: fadeInUp 0.8s ease-out 0.4s both;
 }
+
 
 
 

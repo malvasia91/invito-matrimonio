@@ -354,7 +354,7 @@ section.event-details::before {
 /* RIQUADRI EVENTI STESSA DIMENSIONE SU MOBILE */
 @media (max-width: 768px) {
     .event-card {
-        min-height: 240px !important; /* ← STESSA ALTEZZA FISSA */
+        min-height: 280px !important; /* ← STESSA ALTEZZA FISSA */
         height: 240px !important; /* ← FORZA altezza uguale */
         display: flex !important;
         flex-direction: column !important;
@@ -770,6 +770,7 @@ section.rsvp {
 footer {
     animation: fadeInUp 0.8s ease-out 0.4s both;
 }
+
 
 
 

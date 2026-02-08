@@ -612,20 +612,21 @@ section.rsvp {
 .tourism-section {
     padding: 60px 20px 40px 20px;
     background: rgba(248, 250, 248, 0.95);
-    border-top: 1px solid rgba(201, 169, 97, 0.2);
-    border-radius: 18px !important;
+    position: relative; /* ← Necessario per il posizionamento */
+    border-top: 1px solid rgba(201, 169, 97, 0.2); /* ← BARRA DORATA */
 }
 
 .tourism-section::before {
-    content: '';
+    content: ''; /* ← Linea dorata */
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 60px;
     height: 3px;
-    background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+    background: linear-gradient(90deg, transparent, var(--color-gold), transparent); /* ← Effetto sfumato dorato */
 }
+
 /*.tourism-title {
     margin-bottom: 12px;
 }*/
@@ -793,6 +794,7 @@ section.rsvp {
 footer {
     animation: fadeInUp 0.8s ease-out 0.4s both;
 }
+
 
 
 

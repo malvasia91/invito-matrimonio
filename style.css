@@ -696,22 +696,38 @@ section.rsvp {
     right: 16px;
 }
 
-/* RESPONSIVE */
+/* FIXED TESTO CAROUSEL MOBILE */
 @media (max-width: 768px) {
-    .carousel-slide img {
-        height: 240px;
-    }
-    
     .carousel-slide-content {
-        left: 16px;
-        right: 16px;
-        padding: 20px 0 16px 0;
+        left: 12px !important;
+        right: 12px !important;
+        padding: 20px 16px 16px 16px !important;
+        max-height: 140px !important;
     }
     
-    .carousel-nav {
-        width: 42px;
-        height: 42px;
-        font-size: 1.2rem;
+    .carousel-slide-content h3 {
+        font-size: 1.1rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 4px !important;
+        display: block !important;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    
+    .carousel-slide-content p {
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2 !important; /* ← SOLO 2 righe su mobile */
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+        margin: 0 !important;
+        padding-right: 4px !important;
+    }
+    
+    .carousel-slide img {
+        height: 220px !important;
     }
 }
 
@@ -719,6 +735,7 @@ section.rsvp {
 footer {
     animation: fadeInUp 0.8s ease-out 0.4s both;
 }
+
 
 
 

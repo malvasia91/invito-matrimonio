@@ -101,3 +101,40 @@ if (ibanElement) {
         }
     });
 }
+
+// Carousel Turismo
+function initCarousel() {
+    const track = document.getElementById('carouselTrack');
+    const slides = document.querySelectorAll('.carousel-slide');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    
+    let currentIndex = 0;
+    
+    function updateCarousel() {
+        const translateX = -currentIndex * 100;
+        track.style.transform = `translateX(${translateX}%)`;
+    }
+    
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarousel();
+    });
+    
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateCarousel();
+    });
+    
+    // Auto-play opzionale (commentato)
+    // setInterval(() => {
+    //     currentIndex = (currentIndex + 1) % slides.length;
+    //     updateCarousel();
+    // }, 5000);
+}
+
+// Inizializza carousel dopo il caricamento
+if (document.getElementById('carouselTrack')) {
+    initCarousel();
+}
+

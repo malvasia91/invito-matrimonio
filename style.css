@@ -351,6 +351,24 @@ section.event-details::before {
     transform: translateY(-1px);
 }
 
+/* RIQUADRI EVENTI STESSA DIMENSIONE SU MOBILE */
+@media (max-width: 768px) {
+    .event-card {
+        min-height: 240px !important; /* ← STESSA ALTEZZA FISSA */
+        height: 240px !important; /* ← FORZA altezza uguale */
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    .event-card-overlay {
+        flex: 1 !important; /* ← Riempie tutto lo spazio disponibile */
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        padding: 20px 18px !important; /* ← Padding uniforme */
+    }
+}
+
 /* ====== SEZIONE RSVP ====== */
 section.rsvp {
     padding: 60px 20px;
@@ -752,6 +770,7 @@ section.rsvp {
 footer {
     animation: fadeInUp 0.8s ease-out 0.4s both;
 }
+
 
 
 

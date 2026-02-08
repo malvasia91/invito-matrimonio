@@ -696,49 +696,46 @@ section.rsvp {
     right: 16px;
 }
 
-/* CAROUSEL PIÙ GRANDE SU MOBILE - TESTO COMPLETO */
+/* CAROUSEL ENORME SU MOBILE - TESTO COMPLETO */
 @media (max-width: 768px) {
     .tourism-section {
-        padding: 40px 16px 30px 16px !important;
+        padding: 40px 12px 30px 12px !important;
     }
     
     .carousel-container {
-        max-width: 95vw !important; /* ← Più largo */
+        max-width: 98vw !important; /* ← QUASI TUTTO LO SCHERMO */
         margin: 0 auto !important;
     }
     
     .carousel-slide img {
-        height: 260px !important; /* ← Più alto */
+        height: 300px !important; /* ← MOLTO più alto */
     }
     
     .carousel-slide-content {
-        left: 16px !important;
-        right: 16px !important;
-        padding: 24px 20px 20px 20px !important;
-        max-height: 160px !important; /* ← Più spazio per testo */
+        left: 12px !important;
+        right: 12px !important;
+        padding: 28px 12px 24px 12px !important; /* ← PADDING LATERALE RIDOTTO */
+        max-height: 180px !important; /* ← MOLTO più spazio testo */
     }
     
     .carousel-slide-content h3 {
-        font-size: 1.15rem !important;
-        line-height: 1.25 !important;
-        margin-bottom: 8px !important;
-        white-space: normal !important; /* ← Tutto il titolo */
+        font-size: 1.2rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 6px !important;
+        padding: 0 !important;
+        white-space: normal !important;
         overflow: visible !important;
-        display: block !important;
-        -webkit-line-clamp: unset !important;
+        max-width: 100% !important;
     }
     
     .carousel-slide-content p {
-        font-size: 0.88rem !important;
-        line-height: 1.45 !important;
-        -webkit-line-clamp: 3 !important; /* ← 3 righe invece di 2 */
-        max-height: 110px !important;
-        padding-right: 0 !important;
-    }
-    
-    .carousel-nav {
-        width: 46px !important;
-        height: 46px !important;
+        font-size: 0.9rem !important;
+        line-height: 1.4 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        -webkit-line-clamp: 4 !important; /* ← 4 RIGHE */
+        max-height: 130px !important;
+        width: 100% !important;
     }
 }
 
@@ -747,6 +744,7 @@ section.rsvp {
 footer {
     animation: fadeInUp 0.8s ease-out 0.4s both;
 }
+
 
 
 

@@ -609,16 +609,13 @@ section.rsvp {
     border-radius: 18px;
     box-shadow: 0 12px 30px rgba(90, 122, 109, 0.12);
 }
-
 .carousel-track {
     display: flex;
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    gap: 0; /* ← RIMUOVO gap per centrare perfettamente */
-    width: 400%; /* ← 100% x 4 slides */
 }
 
 .carousel-slide {
-    flex: 0 0 25%; /* ← Esattamente 1/4 della larghezza */
+    flex: 0 0 100%; /* ← TORNO AL 100% come prima */
     position: relative;
     display: block;
     text-decoration: none;
@@ -626,12 +623,6 @@ section.rsvp {
     overflow: hidden;
     box-shadow: 0 8px 24px rgba(0,0,0,0.12);
     transition: all 0.4s ease;
-    margin: 0; /* ← No margini */
-}
-
-.carousel-slide:hover {
-    transform: scale(1.02);
-    box-shadow: 0 16px 40px rgba(90, 122, 109, 0.2);
 }
 
 .carousel-slide img {
@@ -639,6 +630,11 @@ section.rsvp {
     height: 280px;
     object-fit: cover;
     display: block;
+}
+
+.carousel-slide:hover {
+    transform: scale(1.02);
+    box-shadow: 0 16px 40px rgba(90, 122, 109, 0.2);
 }
 
 .carousel-slide-content {
@@ -729,6 +725,7 @@ section.rsvp {
 footer {
     animation: fadeInUp 0.8s ease-out 0.4s both;
 }
+
 
 
 

@@ -586,6 +586,7 @@ section.rsvp {
     padding: 60px 20px 40px 20px;
     background: rgba(248, 250, 248, 0.95);
     border-top: 1px solid rgba(201, 169, 97, 0.2);
+    border-radius: 18px !important;
 }
 
 .tourism-title {
@@ -755,6 +756,7 @@ section.rsvp {
 footer {
     animation: fadeInUp 0.8s ease-out 0.4s both;
 }
+
 
 
 

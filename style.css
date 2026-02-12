@@ -90,15 +90,31 @@ header.hero::after {
     z-index: 1;
 }
 
-/* Titoli nomi sposi */
+/* Titoli nomi sposi - PC E MOBILE */
 .hero-content h1 {
-    font-family: var(--font-heading);
-    font-size: clamp(2.8rem, 8vw, 4rem); /* Responsive */
-    font-weight: 400;
-    color: var(--color-primary);
-    margin-bottom: 10px;
-    letter-spacing: 1px;
+    font-family: var(--font-heading) !important; /* Tangerine */
+    font-size: clamp(3.5rem, 10vw, 5.5rem) !important; /* ← PIÙ GRANDE */
+    font-weight: 400 !important;
+    color: var(--color-primary) !important;
+    margin-bottom: 15px !important;
+    letter-spacing: 1.5px !important;
+    line-height: 1.1 !important;
 }
+
+/* OVERRIDE MEDIA QUERY per forzare su mobile */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: clamp(3rem, 12vw, 4.5rem) !important; /* ← ANCORA PIÙ GRANDE */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: clamp(2.8rem, 14vw, 4rem) !important; /* ← MAX SU CELLULARE */
+        padding: 0 10px !important;
+    }
+}
+
 .hero-content .ampersand {
     font-size: 2.4rem;
     color: var(--color-gold);
@@ -770,6 +786,7 @@ section.rsvp {
 footer {
     animation: fadeInUp 0.8s ease-out 0.4s both;
 }
+
 
 
 

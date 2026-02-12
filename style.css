@@ -12,7 +12,7 @@
     --color-dark: #2d3d35;
     --color-text: #4a5a52;
     --color-card-bg: rgba(25, 25, 25, 0.65);
-    --font-heading: 'Ocean Delight', cursive;
+    --font-heading: 'Tangerine', cursive;
     --font-body: 'Montserrat', sans-serif;
 }
 
@@ -770,6 +770,7 @@ section.rsvp {
 footer {
     animation: fadeInUp 0.8s ease-out 0.4s both;
 }
+
 
 
 

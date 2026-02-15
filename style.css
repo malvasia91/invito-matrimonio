@@ -79,6 +79,12 @@ header.hero {
     margin: 0 auto;
 }
 
+@media (min-width: 768px) {
+    header.hero {
+        background-attachment: fixed; /* Parallasse */
+    }
+}
+
 header.hero::before,
 header.hero::after {
     content: '';
@@ -804,6 +810,7 @@ section.rsvp {
 footer {
     animation: fadeInUp 0.8s ease-out 0.4s both;
 }
+
 
 
 

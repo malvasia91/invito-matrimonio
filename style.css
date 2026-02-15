@@ -60,7 +60,7 @@ header.hero {
     
     /* SFONDO FOTO */
     background: linear-gradient(rgba(90, 122, 109, 0.7), rgba(90, 122, 109, 0.6)),
-                url('coppia-bg.jpg') center/cover no-repeat fixed;
+                url('coppia-bg.jpeg') center/cover no-repeat fixed;
     
     padding: 40px 20px;
 }
@@ -804,6 +804,7 @@ section.rsvp {
 footer {
     animation: fadeInUp 0.8s ease-out 0.4s both;
 }
+
 
 
 

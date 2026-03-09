@@ -6,10 +6,10 @@
 }
 
 :root {
-    --color-primary: #B59A7A;
     --color-light: #F7F1E8;
     --color-gold: #c9a961;
-    --color-dark: #7A6A55;
+    --color-primary: #A07F52;   /* un filo più scuro */
+    --color-dark: #6B5336;      /* versione scura per hover */
     --color-text: #6E6052;
     --color-card-bg: rgba(25, 25, 25, 0.65);
     --font-heading: 'Tangerine', cursive;

@@ -6,12 +6,13 @@
 }
 
 :root {
-    --color-primary: #5a7a6d;
-    --color-light: #e8ebe6;
-    --color-gold: #c9a961;
-    --color-dark: #2d3d35;
-    --color-text: #4a5a52;
-    --color-card-bg: rgba(25, 25, 25, 0.65);
+    /* 🎨 TEMA AVORIO/CHAMPAGNE */
+    --color-primary: #D4AF37;      /* Champagne oro caldo */
+    --color-light: #F8F1E9;        /* Avorio crema puro */
+    --color-gold: #F4C430;         /* Oro brillante */
+    --color-dark: #8B7355;         /* Marrone caldo elegante */
+    --color-text: #6B5A4A;         /* Grigio-marrone sofisticato */
+    --color-card-bg: rgba(248, 241, 233, 0.85); /* Avorio semitrasparente */
     --font-heading: 'Tangerine', cursive;
     --font-body: 'Montserrat', sans-serif;
 }
@@ -24,7 +25,11 @@ body {
     font-family: var(--font-body);
     color: var(--color-text);
     line-height: 1.6;
-    background: linear-gradient(135deg, #f5f7f4 0%, #e8ede8 50%, #f0f3ed 100%);
+        /* Background avorio sfumato */
+    background: linear-gradient(135deg, 
+        #F8F1E9 0%,    /* Avorio chiaro */
+        #FDF6E3 50%,   /* Champagne */
+        #FAF0E4 100%); /* Crema caldo */
     background-attachment: fixed;
 }
 
@@ -77,8 +82,8 @@ header.hero {
     backdrop-filter: blur(10px);
     padding: 30px 25px;
     border-radius: 20px;
-    border: 1px solid rgba(201, 169, 97, 0.2);
-    box-shadow: 0 15px 35px rgba(90, 122, 109, 0.12);
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.12); /* Avorio */
+    border: 1px solid rgba(244, 196, 48, 0.2);         /* Oro tenue */
     margin: 0 auto;
     max-width: 650px;
     top: -40px; /* ← Sovrapposizione elegante */
@@ -210,8 +215,8 @@ header.hero::after {
     background: rgba(248, 250, 248, 0.95);
     border-radius: 16px;
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(201, 169, 97, 0.2);
-    box-shadow: 0 8px 24px rgba(90, 122, 109, 0.12);
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.12); /* Avorio */
+    border: 1px solid rgba(244, 196, 48, 0.2);         /* Oro tenue */
     justify-content: center;  /* ← centra tutto */
 }
 
@@ -222,14 +227,14 @@ header.hero::after {
     border-radius: 12px;
     min-width: 70px;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(90, 122, 109, 0.08);
-    border: 1px solid rgba(90, 122, 109, 0.15);
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.12); /* Avorio */
+    border: 1px solid rgba(244, 196, 48, 0.2);         /* Oro tenue */
     transition: all 0.3s ease;
 }
 
 .count-box:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(90, 122, 109, 0.16);
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.12); /* Avorio */
     background: rgba(255, 255, 255, 1);
 }
 
@@ -310,7 +315,7 @@ section.event-details::before {
     background-size: cover;
     background-position: center;
     min-height: 220px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.15);
     transform: translateY(0);
     transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
 }
@@ -318,7 +323,7 @@ section.event-details::before {
 /* effetto hover su tutta l’area */
 .event-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 16px 35px rgba(0,0,0,0.28);
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.12); /* Avorio */
     filter: brightness(1.05);
 }
 
@@ -363,7 +368,7 @@ section.event-details::before {
     align-items: center;
     justify-content: center;
     margin-right: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.12); /* Avorio */
 }
 
 .event-card-icon img {
@@ -463,13 +468,13 @@ section.rsvp {
     transition: all 0.3s ease;
     text-decoration: none;
     letter-spacing: 0.5px;
-    box-shadow: 0 4px 15px rgba(90, 122, 109, 0.2);
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.12); /* Avorio */
 }
 
 .rsvp-button:hover {
     background: var(--color-dark);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(90, 122, 109, 0.3);
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.12); /* Avorio */
 }
 
 .rsvp-button:active {
@@ -481,7 +486,7 @@ footer {
     background: linear-gradient(180deg, #f0f3ed 0%, #e8ede8 100%);
     padding: 50px 20px 40px 20px;
     text-align: center;
-    border-top: 1px solid rgba(201, 169, 97, 0.2);
+    border-top: 1px solid rgba(244, 196, 48, 0.2);         /* Oro tenue */
 }
 
 .footer-message {
@@ -506,9 +511,9 @@ footer {
     margin: 30px auto 20px auto;
     padding: 24px 22px;
     background: transparent;
-    border: 2px dashed rgba(90, 122, 109, 0.5);
+    border: 2px dashed rgba(244, 196, 48, 0.5);
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(90, 122, 109, 0.08);
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.12); /* Avorio */
     font-size: 0.95rem;
 }
 
@@ -836,6 +841,7 @@ section.rsvp {
 footer {
     animation: fadeInUp 0.8s ease-out 0.4s both;
 }
+
 
 
 

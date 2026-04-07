@@ -335,6 +335,10 @@ section.event-details::before {
     background-image: url('reception-bg.jpg');
 }
 
+.event-card-parcheggio {
+    background-image: url('parcheggio.png');
+}
+
 .event-card-overlay {
     position: relative;
     z-index: 1;
